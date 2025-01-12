@@ -1,90 +1,378 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f2ec; /* Earthy, natural background */
     color: #333;
-  }
-  
-  header {
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6b8e23; /* Earthy green color */
+}
+
+/* Header Section */
+header {
+    background-color: #3b6b32; /* Dark natural green for header */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2f4f4f;
-    padding: 20px;
-  }
-  
-  header img {
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    top: 2%;  /* Adjust this value to position the logo above the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;  /* Make sure the logo is above the navbar */
+}
+
+.logo img {
     width: 150px;
-  }
-  
-  nav ul {
+}
+
+nav {
     display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .hero {
-    background-image: url('../images/bg/hero.jpg');
-    background-size: cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
-  }
-  
-  .hero-content {
-    text-align: center;
+}
+
+/* Navbar Left (menu items) */
+.navbar-left {
+    list-style: none;
+    display: flex;
+    margin-right: auto; /* Push the login/register section to the right */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f4f2ec;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #d2a679; /* Earthy beige highlight */
+}
+
+/* Login/Register button */
+.login-register {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Push login/register to the right */
+}
+
+.login-btn, .register-btn {
     color: #fff;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero-content p {
-    font-size: 24px;
+    background-color: #6b8e23; /* Earthy green color */
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover, .register-btn:hover {
+    background-color: #556b2f; /* Darker green on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('/assets/images/bg/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f4f2ec;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.cta-btn {
+    background-color: #6b8e23;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #556b2f;
+}
+
+/* Featured Retreats Section */
+.featured-retreats {
+    background-color: #e5ddc5; /* Light earthy beige */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.featured-retreats h2 {
+    font-size: 2.5rem;
     margin-bottom: 40px;
-  }
-  
-  .features {
+    color: #3b6b32;
+}
+
+.retreat-grid {
     display: flex;
     justify-content: space-around;
-    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.retreat-card {
     background-color: #fff;
-  }
-  
-  .feature {
-    text-align: center;
     width: 30%;
-  }
-  
-  .feature h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    background-color: #3cb371;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  footer {
-    background-color: #2f4f4f;
-    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.retreat-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.retreat-card:hover {
+    transform: scale(1.05);
+}
+
+.retreat-card h3 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #3b6b32;
+}
+
+.retreat-card p {
+    font-size: 1rem;
+    padding: 0 20px 20px;
+    color: #333;
+}
+
+.learn-more {
+    color: #6b8e23;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #556b2f;
+}
+
+/* Sustainability Section */
+.sustainability-highlight {
+    background-color: #fff;
+    padding: 50px;
     text-align: center;
-    padding: 20px 0;
-  }
-  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sustainability-highlight h2 {
+    font-size: 2.5rem;
+    color: #3b6b32;
+    margin-bottom: 30px;
+}
+
+.sustainability-highlight p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.sustainability-highlight .cta-btn {
+    background-color: #6b8e23;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.sustainability-highlight .cta-btn:hover {
+    background-color: #556b2f;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #e5ddc5;
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #3b6b32;
+}
+
+.testimonial-carousel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #3b6b32;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #3b6b32;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .box {
+    width: 30%;
+}
+
+.footer .box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer .box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #e5ddc5;
+}
+
+.footer .box a {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer .box a:hover {
+    color: #d2a679;
+}
+
+.share {
+    display: flex;
+    justify-content: space-evenly; /* Spreads out the icons evenly */
+    gap: 0px; /* Adds some spacing between the icons */
+    align-items: center; /* Vertically centers the icons */
+}
+
+.footer .share a {
+    font-size: 1.5rem;
+    /* margin: 0 10px; */
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer .share a:hover {
+    color: #d2a679;
+}
+
+.credit {
+    margin-top: 30px;
+    color: #e5ddc5;
+    font-size: 1rem;
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

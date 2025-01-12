@@ -1,0 +1,28 @@
+{
+    "name": "eco-med-retreat",
+    "version": "1.0.0",
+    "description": "An eco-friendly wellness retreat platform combining health, sustainability, and luxury experiences.",
+    "main": "index.html",
+    "scripts": {
+      "start": "live-server --open=./pages/index.html",
+      "build": "echo 'Build process not defined for static website'",
+      "test": "echo 'No tests defined'",
+      "lint": "eslint ."
+    },
+    "author": "Khushboo Parmar",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+      "live-server": "^1.2.1",
+      "eslint": "^8.0.0",
+      "prettier": "^2.8.0"
+    },
+    "keywords": [
+      "eco-friendly",
+      "wellness",
+      "retreat",
+      "sustainability",
+      "website"
+    ]
+  }
+  
