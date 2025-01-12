@@ -68,11 +68,11 @@ eco-med-retreat/
 ## 💻 Installation & Setup
 
 1. **Clone the repository**:
-    
+   ```bash
    git clone https://github.com/username/eco-med-retreat.git
    ```
 2. **Navigate to the project directory**:
-    
+   ```bash
    cd eco-med-retreat
    ```
 3. **Open the `index.html` file in your browser** to view the homepage.
@@ -104,4 +104,3 @@ For any inquiries or feedback, please feel free to contact us at:
 ---
 
 Thank you for checking out **Eco-Med Retreat**! 🌿 Together, let's create a healthier and more sustainable world through mindful retreats and eco-conscious practices.
-
