@@ -98,8 +98,8 @@ We welcome contributions! If you'd like to improve the website, please feel free
 
 For any inquiries or feedback, please feel free to contact us at:
 
-- **Email**: info@ecomedretreat.com
-- **Website**: [ecomedretreat.com](https://www.ecomedretreat.com)
+- **Email**: adityaaerpule@gmail.com
+- **Website**: [ecomedretreat.com](https://mangalam-retreat.netlify.app/)
 
 ---
 

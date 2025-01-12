@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangalam Eco-Med Retreat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for hover effect */
+        a {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: #16a34a; /* Default Emerald color */
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            color: #10b981; /* Lighter Emerald color on hover */
+            transform: scale(1.05);
+        }
+
+        /* Underline effect on hover */
+        a span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            background-color: #10b981; /* Emerald underline color */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        a:hover span {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Popup animation for mobile menu */
+        #mobile-menu {
+            animation: popup 0.3s ease-out forwards;
+        }
+
+        @keyframes popup {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fixed w-full bg-opacity-90 bg-sage-50 backdrop-blur-sm shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo Section -->
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="flex items-center gap-2">
+                        <svg class="h-8 w-8 text-emerald-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="bi bi-leaf">
+                            <path d="M12 0c-1.156 0-2.295.205-3.357.571a8.007 8.007 0 0 0-1.946 6.674A7.992 7.992 0 0 0 4.018 6.157a7.961 7.961 0 0 0-2.277 5.206C1.33 13.047 1 14.503 1 16c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8zm0 14a6 6 0 1 1 6-6 6.006 6.006 0 0 1-6 6z" />
+                        </svg>
+                        <span class="text-2xl font-serif font-bold text-emerald-800">Mangalam</span>
+                        <span class="hidden md:block text-sm text-emerald-600 font-light">Eco-Med Retreat</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">Home
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">Retreats
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">Sustainability
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">Wellness Programs
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">About Us
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                    <a href="#" class="text-emerald-700 hover:text-emerald-500 px-3 py-2 text-sm font-medium transition-all duration-300 relative group">Contact
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Navigation Button -->
+                <div class="md:hidden">
+                    <button id="nav-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-emerald-700 hover:text-emerald-500 hover:bg-emerald-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 transition-all duration-300">
+                        <svg id="bars-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12h18M3 6h18M3 18h18"></path>
+                        </svg>
+                        <svg id="times-icon" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">Retreats</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">Sustainability</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">Wellness Programs</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">About Us</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-emerald-700 hover:text-emerald-500 hover:bg-emerald-50 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const barsIcon = document.getElementById('bars-icon');
+        const timesIcon = document.getElementById('times-icon');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                barsIcon.classList.add('hidden');
+                timesIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                barsIcon.classList.remove('hidden');
+                timesIcon.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>
